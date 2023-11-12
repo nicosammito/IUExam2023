@@ -1,0 +1,13 @@
+body {
+    font-family: 'Ubuntu';
+}
+
+.dropdown-item:hover{
+    background-color: #f5a2fe;
+    border-radius: 10px;
+}
+
+
+
+
+
