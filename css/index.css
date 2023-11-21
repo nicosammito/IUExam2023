@@ -78,3 +78,20 @@ body {
     border-color: transparent;
 
 }
+
+.container-sm{
+    background-color: white;
+    border-radius: 20px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 2.5%;
+    box-shadow: 10px 20px 15px silver;
+}
+
+.headline{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20%;
+}
