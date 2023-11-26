@@ -83,22 +83,24 @@ body {
 
 
 /* Homepage Funktionalität */
-.container-sm {
-  background: white;
-  border-radius: 1.5rem;
-  border-color: white;
-  border-width: .1rem;
-  border-style: solid;
-  box-shadow: .8rem .8rem .8rem silver;
-}
-
 h1 {
   font-size: 3.5rem;
   font-weight: bold;
+  margin-top: 4rem;
 }
 
 .tab {
   padding: .2rem 0 .5rem 0;
+}
+
+.container-sm {
+  background: white;
+  border-color: white;
+  border-style: solid;
+  border-width: .1rem;
+  border-radius: 1.5rem;
+  box-shadow: .8rem .8rem .8rem silver;
+  margin-top: 4.4rem;
 }
 
 .tablinks {
@@ -124,21 +126,14 @@ h1 {
 .intab-button {
   border-radius: .7rem;
   background: transparent;
-  width: 7rem;
-  height: 7rem;
-}
-
-.intab-button-defect {
-  border-radius: .7rem;
-  background: transparent;
-  width: 7rem;
-  height: 7rem;
+  box-shadow: inset 0 0 0 2px rgba(189, 189, 189);
+  color: black;
 }
 
 .intab-button:hover,
 .intab-button.active {
   background-color: rgba(255, 255, 255, .25);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 1);
   color: black;
 }
 /* Homepage Funktionalität Ende */
