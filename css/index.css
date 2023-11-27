@@ -1,16 +1,54 @@
 html {
   height: 100%;
+  width: 100%;
   background: white;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: Ubuntu, sans-serif;
   color: black;
-  height: 50%;
+  padding: 0;
+  margin: 0;
+  /*height: 50%;
   background: white;
   background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
   background-repeat: repeat-x;
-  background-size: auto;
+  background-size: auto;*/
+}
+.section-nav {
+  background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
+}
+
+.section-alpha {
+  background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
+  height: fit-content;
+  position: relative;
+  min-height: fit-content;
+  display: block;
+}
+
+@media only screen and (max-width: 300px) {
+  p {
+    font-size: .75rem;
+  }
+  h1 {
+    font-size: 1.25rem !important;
+  }
+}
+
+.section-alpha > .container {
+  padding: 3rem;
+  position: relative;
+}
+
+.section-beta {
+  transform: translateY(-50%);
+  display: block;
+  position: relative;
 }
 
 /* Navigation */
@@ -86,7 +124,6 @@ body {
 h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  margin-top: 4rem;
 }
 
 .tab {
@@ -99,8 +136,7 @@ h1 {
   border-style: solid;
   border-width: .1rem;
   border-radius: 1.5rem;
-  box-shadow: .8rem .8rem .8rem silver;
-  margin-top: 4.4rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
 }
 
 .tablinks {
