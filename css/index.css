@@ -186,3 +186,19 @@ h1 {
   border-radius: 20px;
 }
 /* Kontakt Funktionalität Ende */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e4e4e4;
+  color: black;
+  text-align:left;
+}
+
+.footertext{
+  font-family: Ubuntu, sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+}
