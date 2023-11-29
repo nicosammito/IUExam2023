@@ -29,6 +29,7 @@ body {
   position: relative;
   min-height: fit-content;
   display: block;
+  padding: 20px;
 }
 
 @media only screen and (max-width: 300px) {
@@ -176,31 +177,12 @@ h1 {
 
 
 /* Kontakt Funktionalität */
-.name-field {
+.row {
   width: 100%;
   min-width: 100%;
   box-sizing: border-box;
-  padding: 4px;
+  padding: 5px;
   outline: none;
   border-radius: 20px;
 }
-
-.mail-field {
-  width: 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 4px;
-  outline: none;
-  border-radius: 20px;
-}
-
-.message-field {
-  width: 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 4px;
-  outline: none;
-  border-radius: 20px;
-}
-
 /* Kontakt Funktionalität Ende */
