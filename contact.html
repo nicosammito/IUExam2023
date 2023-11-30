@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-controller">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -30,12 +31,9 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="index.html"><i class="ti ti-home-2"></i> Home</a></li>
-                            <li><a class="dropdown-item" href="about.html"><i class="ti ti-info-circle"></i>Über Uns</a>
-                            </li>
-                            <li><a class="dropdown-item active" href="contact.html"><i
-                                        class="ti ti-address-book"></i>Kontakt</a></li>
-                            <li><a class="dropdown-item" href="imprint.html"><i
-                                        class="ti ti-section-sign"></i>Impressum</a></li>
+                            <li><a class="dropdown-item" href="about.html"><i class="ti ti-info-circle"></i>Über Uns</a></li>
+                            <li><a class="dropdown-item active" href="contact.html"><i class="ti ti-address-book"></i>Kontakt</a></li>
+                            <li><a class="dropdown-item" href="imprint.html"><i class="ti ti-section-sign"></i>Impressum</a></li>
                         </ul>
                     </div>
                 </li>
@@ -43,60 +41,55 @@
         </div>
     </nav>
 
-    <section class="section-alpha">
+    <section class="section-a">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
-                    <h1 class="text-start">Kontakt</h1>
-                    <p class="text-start">Dein Handy Repair Service</p>
-                </div>
+            <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+                <h1 class="text-start">Kontakt</h1>
+                <p class="text-start">Dein Handy Repair Service</p>
             </div>
         </div>
     </section>
 
-    <section class="section-beta">
-        <div class="container-sm">
+    <section class="section-b">
+        <div class="container-sm w-50">
             <form>
-                <div class="row mb-3">
-                    <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
-                    <div class="col-sm-10">
-                        <input type="name" class="form-control" id="inputName3">
+        
+                    <div class="row">
+                        <div class="col-6 col-md-6">
+                          <input type="text" class="form-control" placeholder="Vorname" aria-label="First name">
+                        </div>
+                        <div class="col-6 col-md-6">
+                          <input type="text" class="form-control" placeholder="Nachname" aria-label="Last name">
+                        </div>
+                      </div>
+
+                <div class="row justify-content-center">
+                    <div class="col col-md-6">
+                        <input type="email" class="form-control" id="email" placeholder="E-Mail">
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">E-Mail</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                    <textarea rows="3" class="form-control" id="textarea" placeholder="Deine Nachricht"></textarea>
                 </div>
-                <div class="mb-3">
-                    <label for="textarea" class="form-label">Deine Nachricht</label>
-                    <textarea class="form-control" id="textarea" rows="3"></textarea>
-                  </div>
-                <div class="row mb-3">
-                    <div class="col-sm-10 offset-sm-2">
+                </div>
+                <div class="row justify-content-center">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck1">
                             <label class="form-check-label" for="gridCheck1">
-                                Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben<br>
-                                zum Zweck der Anfrageverarbeitung einverstanden bin.
+                                Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum Zweck der Anfrageverarbeitung einverstanden bin.
                             </label>
-                        </div>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-2">
-                        <button type="submit" class="btn submit-button">Sign in</button>
-                    </div>
+                <div class="row justify-content-center">
+                        <button type="submit" class="btn submit-button col-6">Senden</button>
                 </div>
             </form>
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <!--von nico damit JS funktioniert. ich glaube, das muss immer ganz unten sein-->
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 
+</body>
 </html>

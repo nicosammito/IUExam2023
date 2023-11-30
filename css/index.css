@@ -21,22 +21,23 @@ h1 {
 }
 
 /* Aufbau */
-.section-alpha {
+.section-a {
   background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
   /*height: fit-content;
   min-height: fit-content;
   display: block;
   overflow: visible !important;*/
-  padding: 20px;
+  padding: 1,25rem;
 }
 
-.section-alpha > .container {
+.section-a > .container {
   padding: 3rem;
 }
 
-.section-beta {
-  transform: translateY(-50%);
+.section-b {
+  transform: translateY(-15%);
   display: block;
+  text-align: center;
 }
 
 
@@ -90,8 +91,8 @@ h1 {
   height: 3rem;
   border-radius: .5rem;
   background: #8e99ff;
-  text-align: center;
   display: table-cell;
+  text-align: center;
   vertical-align: middle;
 }
 
@@ -102,6 +103,16 @@ h1 {
 .btn:first-child:active,
 :not(.btn-check)+.btn:active {
   border-color: transparent;
+}
+
+/* Container */
+.container-sm {
+  background: white;
+  border-color: white;
+  border-style: solid;
+  border-width: .1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
 }
 
 /* Fußleiste */
@@ -119,16 +130,6 @@ h1 {
   font-family: Ubuntu, sans-serif;
   margin-top: 20px;
   margin-left: 20px;
-}
-
-/* Container (Weißer Kasten) */
-.container-sm {
-  background: white;
-  border-color: white;
-  border-style: solid;
-  border-width: .1rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
 }
 
 
@@ -176,12 +177,12 @@ h1 {
 
 /* Kontakt */
 
-/* Zeile */
 .row {
   width: 100%;
   min-width: 100%;
   box-sizing: border-box;
-  padding: 1rem .5rem 1rem .5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   outline: none;
   border-radius: .5rem;
 }
