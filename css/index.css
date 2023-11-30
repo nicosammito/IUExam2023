@@ -16,6 +16,7 @@ h2 {
   font-weight: bold;
 }
 
+
 @media only screen and (max-width: 300px) {
   p {
     font-size: .75rem;
@@ -23,15 +24,15 @@ h2 {
   h1 {
     font-size: 1.25rem !important;
   }
+  h2 {
+    font-size: 1.5rem !important;
+  }
 }
+
 
 /* Aufbau */
 .section-a {
   background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
-  /*height: fit-content;
-  min-height: fit-content;
-  display: block;
-  overflow: visible !important;*/
   padding: 1,25rem;
 }
 
@@ -41,6 +42,12 @@ h2 {
 
 .section-b {
   transform: translateY(-15%);
+  display: block;
+  text-align: center;
+}
+
+.section-contact {
+  transform: translateY(-10%);
   display: block;
   text-align: center;
 }
@@ -141,6 +148,27 @@ h2 {
 /* Lokal (betrifft nur eine Seite)*/
 
 /* Hompage */
+
+/* Schriftgrößen */
+@media only screen and (max-width: 370px) {
+  .tab {
+    font-size: .75rem;
+  }
+  .intab-button {
+    font-size: 0;
+  }
+  }
+
+  @media only screen and (max-width: 290px) {
+    .tab {
+      font-size: .5rem;
+    }
+    .intab-button {
+      font-size: 0;
+    }
+    }
+
+ /* Tab-System */
 .tab {
   padding: .2rem 0 .5rem 0;
 }
@@ -181,15 +209,8 @@ h2 {
 
 
 /* Kontakt */
-
-.row {
-  width: 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  outline: none;
-  border-radius: .5rem;
+.padding {
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 /* Submit-Button */
