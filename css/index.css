@@ -1,35 +1,14 @@
-html {
-  height: 100%;
-  width: 100%;
-  background: white;
-}
+/* Global (betrifft alle Seiten)
 
-* {
-  box-sizing: border-box;
-}
-
+/* Schriftarten */
 body {
   font-family: Ubuntu, sans-serif;
   color: black;
-  padding: 0;
-  margin: 0;
-  /*height: 50%;
-  background: white;
-  background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
-  background-repeat: repeat-x;
-  background-size: auto;*/
-}
-.section-nav {
-  background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
 }
 
-.section-alpha {
-  background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
-  height: fit-content;
-  position: relative;
-  min-height: fit-content;
-  display: block;
-  padding: 20px;
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 300px) {
@@ -41,25 +20,35 @@ body {
   }
 }
 
+/* Aufbau */
+.section-alpha {
+  background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
+  /*height: fit-content;
+  min-height: fit-content;
+  display: block;
+  overflow: visible !important;*/
+  padding: 20px;
+}
+
 .section-alpha > .container {
   padding: 3rem;
-  position: relative;
 }
 
 .section-beta {
   transform: translateY(-50%);
   display: block;
-  position: relative;
 }
 
-/* Navigation */
+
+/* Navigationsleiste */
+
+/* Menü */
 .dropdown-menu {
   background: rgba(255, 255, 255, .5);
   backdrop-filter: blur(.5rem);
   -webkit-backdrop-filter: blur(.5rem);
   padding: .5rem;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25);
-  /* All the borders by using the spread properties */
   outline: none;
   border: none;
   border-radius: .5rem;
@@ -95,6 +84,7 @@ body {
   color: black;
 }
 
+/* Logo */
 .logo {
   width: 3rem;
   height: 3rem;
@@ -105,11 +95,7 @@ body {
   vertical-align: middle;
 }
 
-.navbar-controller {
-  position: sticky;
-  border-bottom: 1px solid white;
-}
-
+/* Button-Properties */
 .btn-check:checked+.btn,
 .btn.active,
 .btn.show,
@@ -118,19 +104,24 @@ body {
   border-color: transparent;
 }
 
-/* Navigation Ende */
-
-
-/* Homepage Funktionalität */
-h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
+/* Fußleiste */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e4e4e4;
+  color: black;
+  text-align:left;
 }
 
-.tab {
-  padding: .2rem 0 .5rem 0;
+.footertext{
+  font-family: Ubuntu, sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
+/* Container (Weißer Kasten) */
 .container-sm {
   background: white;
   border-color: white;
@@ -138,6 +129,14 @@ h1 {
   border-width: .1rem;
   border-radius: 1.5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+}
+
+
+/* Lokal (betrifft nur eine Seite)*/
+
+/* Hompage */
+.tab {
+  padding: .2rem 0 .5rem 0;
 }
 
 .tablinks {
@@ -173,32 +172,35 @@ h1 {
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 1);
   color: black;
 }
-/* Homepage Funktionalität Ende */
 
 
-/* Kontakt Funktionalität */
+/* Kontakt */
+
+/* Zeile */
 .row {
   width: 100%;
   min-width: 100%;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 1rem .5rem 1rem .5rem;
   outline: none;
-  border-radius: 20px;
+  border-radius: .5rem;
 }
-/* Kontakt Funktionalität Ende */
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #e4e4e4;
+/* Submit-Button */
+.submit-button {
+  background-color: rgba(255, 255, 255, .25);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25);
   color: black;
-  text-align:left;
 }
 
-.footertext{
-  font-family: Ubuntu, sans-serif;
-  margin-top: 20px;
-  margin-left: 20px;
+.submit-button:hover,
+.submit-button.active {
+  background-color: rgba(255, 255, 255, .25);
+  box-shadow: inset 0 0 0 1px black;
+  color: black;
 }
+
+
+
+
+
