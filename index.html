@@ -9,7 +9,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body onload="openTab(event, 'company')">
@@ -49,9 +49,9 @@
     <section class="section-b">
             <div class="container-sm text-start">
                 <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'company')">Hersteller</button>
-                    <button class="tablinks" onclick="openTab(event, 'model')" disabled>Modell</button>
-                    <button class="tablinks" onclick="openTab(event, 'defect')" disabled>Defekte Komponente</button>
+                    <button class="tablinks" onclick="openTab(event, 'company'), progressc('progress-company')" disabled>Hersteller</button>
+                    <button class="tablinks" onclick="openTab(event, 'model'), progressc('progress-model')" disabled>Modell</button>
+                    <button class="tablinks" onclick="openTab(event, 'defect'), progressc('progress-defect')" disabled>Defekte Komponente</button>
                 </div>
         
                 <!-- Tab content -->
@@ -282,10 +282,10 @@
             <br>
             <div class="container-sm text-start padding"> <!--Eine Art Progress bar, mit der man seine Auswahl und den entsprechenden Preis sehen kann-->
                 <div class="row">
-                    <div class="col" id="progress-company">apple</div>
-                    <div class="col" id="progress-model">iphone 9</div>
-                    <div class="col" id="progress-defect">display</div>
-                    <div class="col" id="progress-price">999€</div>
+                    <div class="col progres" id="progress-company"></div>
+                    <div class="col progres" id="progress-model"></div>
+                    <div class="col progres" id="progress-defect"></div>
+                    <div class="col progres" id="progress-price"></div>
                 </div>
             </div>    
     </section>
