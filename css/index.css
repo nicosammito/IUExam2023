@@ -145,18 +145,20 @@ h2 {
 
 .card {
   padding: 5rem;
-  border: 0.1rem, solid, rgba(255, 255, 255, .25)
+  border: 0.1rem, solid, rgba(255, 255, 255, .25);
   border-radius: 3rem;
+  margin: auto;
 }
 
 .person-card {
-  margin: 0rem;
-  display: flex;
+  margin: auto;
+  display:contents;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border: 3px solid white;
-  padding: 1.25rem;
+  padding-top: 0.25rem;
+  padding-left: 0.25rem;
 }
 
 
@@ -276,8 +278,3 @@ h2 {
   box-shadow: inset 0 0 0 1px black;
   color: black;
 }
-
-
-
-
-
