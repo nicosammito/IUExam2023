@@ -49,17 +49,15 @@ h3 {
 /* Sections */
 .section-a {
   background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
-  padding: 1,25rem;
 }
 
 .section-a > .container {
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .section-b {
   transform: translateY(-10%);
   display: block;
-  text-align: center;
 }
 
 .section-contact {
@@ -163,7 +161,7 @@ h3 {
 }
 
 /* Container */
-.container-sm {
+.container--box {
   background: white;
   border-radius: 1.5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .15);

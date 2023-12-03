@@ -38,7 +38,7 @@ const fetchCompany = () => {
 fetchCompany();
 const addCompany = (dataCompany) => {
 
-    const tabContentCompany = document.querySelector('.tabcontent[attr-tab="manufacturers"]')   
+    const tabContentCompany = document.querySelector('.tabcontent[attr-tab="manufacturers"]')
 
     const button = document.createElement("button")
     button.classList.add("intab-button", "btn")
@@ -71,7 +71,7 @@ const fetchDevices = (manufacturer) => {
     }).then((response) => {
         return response.json()
     }).then((json) => {
-        const tabContentDevice = document.querySelector('.tabcontent[attr-tab="devices"]')  
+        const tabContentDevice = document.querySelector('.tabcontent[attr-tab="devices"]')
         tabContentDevice.innerHTML = ""
         json.response.forEach(device => {
             addDevice(device)
@@ -81,7 +81,7 @@ const fetchDevices = (manufacturer) => {
 
 const addDevice = (dataDevice) => {
 
-    const tabContentDevice = document.querySelector('.tabcontent[attr-tab="devices"]')  
+    const tabContentDevice = document.querySelector('.tabcontent[attr-tab="devices"]')
 
     const button = document.createElement("button")
     button.classList.add("intab-button", "btn")
@@ -109,7 +109,7 @@ const fetchComponents = (manufacturer, device) => {
     }).then((response) => {
         return response.json()
     }).then((json) => {
-        const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]')  
+        const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]')
         tabContentComponent.innerHTML = ""
         json.response.forEach(component => {
             addComponent(component, json.response)
@@ -119,49 +119,81 @@ const fetchComponents = (manufacturer, device) => {
 
 const addComponent = (dataComponent, components) => {
 
-    const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]') 
+    const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]')
 
     const button = document.createElement("button")
     button.classList.add("intab-button", "btn")
 
     button.addEventListener("click", () => {
-        const componentsSection = dcoument.querySelector("#searchedComponents")
+        const componentsSection = document.querySelector("#searchedComponents")
+        componentsSection.innerHTML = ""
         //TODO: load component with prices
-        components.forEach(component => {
-         
-        const componentDiv = document.createElement("div")
-        componentDiv.classList.add("component")
+        components.filter(component => {
+            return component.type === dataComponent.type
+        }).forEach(component => {
 
-        const componentIcon = document.createElement("div")
-        componentIcon.classList.add("component__icon")
+            console.log(component)
 
-        const Icon = document.createElement("i")
-        Icon.classList.add("ti", "ti-device-mobile")
+            const componentDiv = document.createElement("div")
+            componentDiv.classList.add("component")
 
-        componentIcon.appendChild(Icon)
+            const componentIcon = document.createElement("div")
+            componentIcon.classList.add("component__icon")
 
-        const componentInfo = document.createElement("div")
-        componentInfo.classList.add("component__info")
+            const Icon = document.createElement("i")
+            Icon.classList.add("ti", "ti-device-mobile")
 
-        const componentHeading = document.createElement("h4")
-        componentHeading.classList.add("component__heading")
-        componentHeading.innerText = component.type
+            componentIcon.appendChild(Icon)
+            componentDiv.appendChild(componentIcon)
 
-        const componentDesc = document.createElement("p")
-        componentDesc.classList.add("component__desc")
-        componentDesc.innerText = component.description
+            const componentInfo = document.createElement("div")
+            componentInfo.classList.add("component__info")
 
-        componentInfo.appendChild(componentHeading)
-        componentInfo.appendChild(componentDesc)
+            const componentHeading = document.createElement("h4")
+            componentHeading.classList.add("component__heading")
 
-        const button = document.createElement("button")
-        button.classList.add("component__action")
+            const componentSpan = document.createElement("span")
+            componentSpan.innerHTML = component.type
 
-        const btnIcon = document.createElement("i")
-        btnIcon.classList.add("ti", "ti-shopping-cart")
+            const componentPrice = document.createElement("h5")
+            componentPrice.innerHTML = `${component.price}€`
 
-        button.appendChild(btnIcon)
-        componentsSection.appendChild(componentDiv)
+            componentHeading.appendChild(componentSpan)
+            componentHeading.appendChild(componentPrice)
+
+            const componentDesc = document.createElement("p")
+            componentDesc.classList.add("component__desc")
+            componentDesc.innerHTML = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy\n" +
+                "                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+
+            componentInfo.appendChild(componentHeading)
+            componentInfo.appendChild(componentDesc)
+            componentDiv.appendChild(componentInfo)
+
+            const button = document.createElement("button")
+            button.classList.add("component__action")
+            button.addEventListener("click", () => {
+                const object = {
+                    price: component.price,
+                    description: component.description,
+                    type: component.type
+                }
+
+                if (!localStorage.getItem("bucket"))
+                    localStorage.setItem("bucket", JSON.stringify([]))
+
+
+                const bucket = JSON.parse(localStorage.getItem("bucket"));
+                bucket.push(object)
+                localStorage.setItem("bucket", JSON.stringify(bucket))
+            })
+
+            const btnIcon = document.createElement("i")
+            btnIcon.classList.add("ti", "ti-shopping-cart")
+
+            button.appendChild(btnIcon)
+            componentDiv.appendChild(button)
+            componentsSection.appendChild(componentDiv)
         })
     })
 
