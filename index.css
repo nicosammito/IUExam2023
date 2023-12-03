@@ -1,6 +1,4 @@
-/* Global (betrifft alle Seiten)
-
-/* Schriftarten */
+/* Font */
 body {
   font-family: Ubuntu, sans-serif;
   color: black;
@@ -22,10 +20,28 @@ h2 {
     font-size: .75rem;
   }
   h1 {
-    font-size: 1.25rem !important;
+    font-size: 1.25rem;
   }
   h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .tab {
+    font-size: .75rem;
+  }
+  .intab-button {
+    font-size: 0;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .tab {
+    font-size: .5rem;
+  }
+  .intab-button {
+    font-size: 0;
   }
 }
 
@@ -41,15 +57,21 @@ h2 {
 }
 
 .section-b {
-  transform: translateY(-15%);
+  transform: translateY(-10%);
   display: block;
   text-align: center;
 }
 
-.section-contact {
-  transform: translateY(-10%);
+.section-about {
+  transform: translateY(-5%);
   display: block;
   text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-about {
+    transform: translateY(0%);
+  }
 }
 
 
@@ -122,64 +144,10 @@ h2 {
 .container-sm {
   background: white;
   border-color: white;
-  border-style: solid;
   border-width: .1rem;
   border-radius: 1.5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
 }
-
-/* About us */
-
-
-/* Container */
-.container-sm-au {
-  background: white;
-  border-color: white;
-  border-style: solid;
-  border-width: .1rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
-  margin-top: auto;
-  margin-right: 3rem;
-  margin-left: 3rem;
-  padding: 1.25rem;
-}
-
-.card {
-  padding: 5rem;
-  border: 0.1rem, solid, rgba(255, 255, 255, .25);
-  border-radius: 3rem;
-  margin: auto;
-}
-
-.person-card {
-  margin: auto;
-  display:contents;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 3px solid white;
-  padding-top: 0.25rem;
-  padding-left: 0.25rem;
-}
-
-
-.card-img-top {
-  margin: 0 auto;
-  margin-top: 1.25rem;
-  border: 3px solid green;
-}
-
-/* Profile pictures */
-.container-sm-au img {
-  clip-path: circle(50%);
-  width: 6.25rem;
-  height: 6.25rem;
-  object-fit: cover;
-}
-
-
-
 
 /* Fußleiste */
 .footer {
@@ -199,28 +167,8 @@ h2 {
 }
 
 
-/* Lokal (betrifft nur eine Seite)*/
 
 /* Hompage */
-
-/* Schriftgrößen */
-@media only screen and (max-width: 370px) {
-  .tab {
-    font-size: .75rem;
-  }
-  .intab-button {
-    font-size: 0;
-  }
-}
-
-@media only screen and (max-width: 290px) {
-  .tab {
-    font-size: .5rem;
-  }
-  .intab-button {
-    font-size: 0;
-  }
-}
 
  /* Tab-System */
 .tab {
@@ -263,9 +211,21 @@ h2 {
 
 
 /* Kontakt */
-.padding {
-  padding: 1rem 1rem 1rem 1rem;
+.section-contact {
+  transform: translateY(-5%);
+  display: block;
+  text-align: center;
 }
+
+.container-sm-ct {
+  background: white;
+  border-color: white;
+  border-width: .1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+}
+
+
 
 /* Submit-Button */
 .submit-button {
@@ -279,4 +239,49 @@ h2 {
   background-color: rgba(255, 255, 255, .25);
   box-shadow: inset 0 0 0 1px black;
   color: black;
+}
+
+
+/* About us */
+
+
+
+
+/* Container */
+.container-sm-au {
+  background: white;
+  border-color: white;
+  border-width: .1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+  margin-top: auto;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  padding: 1.25rem;
+}
+
+.card {
+  padding: 5rem;
+  border: 0.2rem, solid, rgba(255, 255, 255, .25);
+  border-radius: 3rem;
+  margin: auto;
+}
+
+.person-card {
+  display: contents;
+}
+
+
+.card-img-top {
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  border: 3px solid green;
+}
+
+/* Profile pictures */
+.container-sm-au img {
+  clip-path: circle(50%);
+  width: 6.25rem;
+  height: 6.25rem;
+  object-fit: cover;
 }

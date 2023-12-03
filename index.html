@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <script src="js/index.js"></script>
+    <script src="index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body onload="openTab(event, 'company')">
@@ -49,9 +49,9 @@
     <section class="section-b">
             <div class="container-sm text-start">
                 <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'company'), progressc('progress-company')" disabled>Hersteller</button>
-                    <button class="tablinks" onclick="openTab(event, 'model'), progressc('progress-model')" disabled>Modell</button>
-                    <button class="tablinks" onclick="openTab(event, 'defect'), progressc('progress-defect')" disabled>Defekte Komponente</button>
+                    <button class="tablinks" onclick="openTab(event, 'company')">Hersteller</button>
+                    <button class="tablinks" onclick="openTab(event, 'model')">Modell</button>
+                    <button class="tablinks" onclick="openTab(event, 'defect')">Defekte Komponente</button>
                 </div>
         
                 <!-- Tab content -->
@@ -75,94 +75,94 @@
                         iPhone SE
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">iPhone SE 2016 (1.Generation)</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">iPhone SE 2020 (2.Generation)</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">iPhone SE 2022 (3.Generation)</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">iPhone SE 2016 (1.Generation)</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">iPhone SE 2020 (2.Generation)</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">iPhone SE 2022 (3.Generation)</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 15
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">15</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">15 Plus</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">15 Pro</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">15 Pro Max</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">15</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">15 Plus</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">15 Pro</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">15 Pro Max</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 14
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">14</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">14 Plus</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">14 Pro</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">14 Pro Max</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">14</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">14 Plus</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">14 Pro</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">14 Pro Max</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 13
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">13 mini</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">13</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">13 Pro</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">13 Pro Max</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">13 mini</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">13</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">13 Pro</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">13 Pro Max</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 12
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">12 mini</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">12</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">12 Pro</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">12 Pro Max</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">12 mini</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">12</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">12 Pro</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">12 Pro Max</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 11
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">11</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">11 Pro</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">11 Pro Max</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">11</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">11 Pro</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">11 Pro Max</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone X
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">X</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">XR</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">XS</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">XS Max</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">X</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">XR</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">XS</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">XS Max</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 8
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">8</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">8 Plus</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">8</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">8 Plus</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 7
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">7</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">7 Plus</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">7</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">7 Plus</a></li>
                     </ul>
         
                     <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         iPhone 6
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">6</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">6 Plus</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">6s</a></li>
-                        <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">6s Plus</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">6</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">6 Plus</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">6s</a></li>
+                        <li><a class="dropdown-item" onclick="openTab(event, 'defect')">6s Plus</a></li>
                     </ul>
                 </div>
         
@@ -172,8 +172,8 @@
                             Pixel 8
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 8</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 8 Pro</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 8</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 8 Pro</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -181,8 +181,8 @@
                             Pixel 7
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 7</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 7 Pro</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 7</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 7 Pro</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -190,8 +190,8 @@
                             Pixel 6
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 6</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 6 Pro</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 6</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 6 Pro</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -199,8 +199,8 @@
                             Pixel 5
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 5</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 5a</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 5</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 5a</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -208,10 +208,10 @@
                             Pixel 4
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 4</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 4 XL</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 4a</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Pixel 4a (5G)</a>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 4</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 4 XL</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 4a</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Pixel 4a (5G)</a>
                             </li>
                         </ul>
                     </div>
@@ -223,9 +223,9 @@
                             Galaxy S23
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S23</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S23+</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S23 Ultra</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S23</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S23+</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S23 Ultra</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -233,9 +233,9 @@
                             Galaxy S22
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">22</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">22+</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">22 Ultra</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">22</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">22+</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">22 Ultra</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -243,10 +243,10 @@
                             Galaxy S21
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S21</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S21+</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S21 Ultra</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S21 FE</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S21</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S21+</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S21 Ultra</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S21 FE</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -254,10 +254,10 @@
                             Galaxy S20
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S20</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S20+</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S20 Ultra</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">S20 FE</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S20</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S20+</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S20 Ultra</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">S20 FE</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -265,14 +265,14 @@
                             Galaxy Note 20
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Note 20</a></li>
-                            <li><a class="dropdown-item" onclick="openTab(event, 'Defekte Komponente')">Note 20 Ultra</a>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Note 20</a></li>
+                            <li><a class="dropdown-item" onclick="openTab(event, 'defect')">Note 20 Ultra</a>
                             </li>
                         </ul>
                     </div>
                 </div>
         
-                <div id="Defekte Komponente" class="tabcontent">
+                <div id="defect" class="tabcontent">
                     <button class="btn intab-button">Display</button>
                     <button class="btn intab-button">Akku</button>
                     <button class="btn intab-button">Kameraglas</button>
