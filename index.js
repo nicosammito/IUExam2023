@@ -126,7 +126,9 @@ const addComponent = (dataComponent, components) => {
 
     button.addEventListener("click", () => {
         //TODO: load component with prices
-
+        json.respone.forEach(component => {
+            
+        })
     })
 
     const type = document.createElement("span")
