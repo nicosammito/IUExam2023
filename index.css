@@ -2,6 +2,9 @@
 body {
   font-family: Ubuntu, sans-serif;
   color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -14,8 +17,7 @@ h2 {
   font-weight: bold;
 }
 
-
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 370px) {
   p {
     font-size: .75rem;
   }
@@ -25,28 +27,22 @@ h2 {
   h2 {
     font-size: 1.5rem;
   }
-}
-
-@media only screen and (max-width: 370px) {
+  h5 {
+    font-size: 1rem;
+  }
   .tab {
     font-size: .75rem;
   }
   .intab-button {
     font-size: 0;
   }
-}
-
-@media only screen and (max-width: 290px) {
-  .tab {
-    font-size: .5rem;
-  }
-  .intab-button {
-    font-size: 0;
+  .footertext{
+    font-size: 0.75rem;
   }
 }
 
 
-/* Aufbau */
+/* Sections */
 .section-a {
   background: linear-gradient(to right, #a1acfe, #ffffff, #f5a2fe);
   padding: 1,25rem;
@@ -62,15 +58,27 @@ h2 {
   text-align: center;
 }
 
+.section-contact {
+  transform: translateY(-5%);
+  display: block;
+  text-align: center;
+}
+
 .section-about {
   transform: translateY(-5%);
   display: block;
   text-align: center;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 300px) {
   .section-about {
-    transform: translateY(0%);
+    transform: translateY(-2%);
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .section-about {
+    transform: translateY(-2%);
   }
 }
 
@@ -143,29 +151,63 @@ h2 {
 /* Container */
 .container-sm {
   background: white;
-  border-color: white;
-  border-width: .1rem;
   border-radius: 1.5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
 }
 
+.container-sm-ct {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+  margin-right: 3rem;
+  margin-left: 3rem;
+  padding: 1.25rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .container-sm-ct {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.container-sm-au {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+  margin-right: 3rem;
+  margin-left: 3rem;
+  padding: 1.25rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .container-sm-au {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
 /* Fußleiste */
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+footer {
+  margin-top: auto;
+  text-align:center;
   background-color: #e4e4e4;
-  color: black;
-  text-align:left;
 }
 
 .footertext{
-  font-family: Ubuntu, sans-serif;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 1rem
 }
 
+.footerlink {
+  color: black;
+  text-decoration: none;
+}
+
+.footerlinks:hover,
+.footerlink.active {
+  font-weight: bold;
+}
 
 
 /* Hompage */
@@ -211,21 +253,6 @@ h2 {
 
 
 /* Kontakt */
-.section-contact {
-  transform: translateY(-5%);
-  display: block;
-  text-align: center;
-}
-
-.container-sm-ct {
-  background: white;
-  border-color: white;
-  border-width: .1rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
-}
-
-
 
 /* Submit-Button */
 .submit-button {
@@ -243,34 +270,22 @@ h2 {
 
 
 /* About us */
-
-
-
-
-/* Container */
-.container-sm-au {
-  background: white;
-  border-color: white;
-  border-width: .1rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
-  margin-top: auto;
-  margin-right: 3rem;
-  margin-left: 3rem;
-  padding: 1.25rem;
-}
-
 .card {
-  padding: 5rem;
-  border: 0.2rem, solid, rgba(255, 255, 255, .25);
+  padding: 5rem 2rem 5rem 2rem;
   border-radius: 3rem;
   margin: auto;
+  width: 25rem;
+}
+
+@media only screen and (max-width: 300px) {
+  .card {
+    padding: 2rem 0rem 2rem 0rem;
+  }
 }
 
 .person-card {
   display: contents;
 }
-
 
 .card-img-top {
   margin: 0 auto;
