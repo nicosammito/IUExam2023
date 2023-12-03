@@ -143,6 +143,16 @@ h3 {
   vertical-align: middle;
 }
 
+.nav-shooping-cart{
+  font-size: 30px;
+  padding: 0 1rem;
+  margin-right: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: .5rem;
+  align-items: center;
+}
+
 /* Button-Properties */
 .btn-check:checked+.btn,
 .btn.active,
