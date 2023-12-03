@@ -119,15 +119,49 @@ const fetchComponents = (manufacturer, device) => {
 
 const addComponent = (dataComponent, components) => {
 
-    const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]')  
+    const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]') 
 
     const button = document.createElement("button")
     button.classList.add("intab-button", "btn")
 
     button.addEventListener("click", () => {
+        const componentsSection = dcoument.querySelector("#searchedComponents")
         //TODO: load component with prices
-        json.respone.forEach(component => {
-            
+        components.forEach(component => {
+         
+        const componentDiv = document.createElement("div")
+        componentDiv.classList.add("component")
+
+        const componentIcon = document.createElement("div")
+        componentIcon.classList.add("component__icon")
+
+        const Icon = document.createElement("i")
+        Icon.classList.add("ti", "ti-device-mobile")
+
+        componentIcon.appendChild(Icon)
+
+        const componentInfo = document.createElement("div")
+        componentInfo.classList.add("component__info")
+
+        const componentHeading = document.createElement("h4")
+        componentHeading.classList.add("component__heading")
+        componentHeading.innerText = component.type
+
+        const componentDesc = document.createElement("p")
+        componentDesc.classList.add("component__desc")
+        componentDesc.innerText = component.description
+
+        componentInfo.appendChild(componentHeading)
+        componentInfo.appendChild(componentDesc)
+
+        const button = document.createElement("button")
+        button.classList.add("component__action")
+
+        const btnIcon = document.createElement("i")
+        btnIcon.classList.add("ti", "ti-shopping-cart")
+
+        button.appendChild(btnIcon)
+        componentsSection.appendChild(componentDiv)
         })
     })
 
