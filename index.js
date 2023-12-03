@@ -127,12 +127,10 @@ const addComponent = (dataComponent, components) => {
     button.addEventListener("click", () => {
         const componentsSection = document.querySelector("#searchedComponents")
         componentsSection.innerHTML = ""
-        //TODO: load component with prices
+
         components.filter(component => {
             return component.type === dataComponent.type
         }).forEach(component => {
-
-            console.log(component)
 
             const componentDiv = document.createElement("div")
             componentDiv.classList.add("component")
@@ -164,7 +162,7 @@ const addComponent = (dataComponent, components) => {
             const componentDesc = document.createElement("p")
             componentDesc.classList.add("component__desc")
             componentDesc.innerHTML = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy\n" +
-                "                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                                      "eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
 
             componentInfo.appendChild(componentHeading)
             componentInfo.appendChild(componentDesc)
@@ -179,13 +177,13 @@ const addComponent = (dataComponent, components) => {
                     type: component.type
                 }
 
-                if (!localStorage.getItem("bucket"))
-                    localStorage.setItem("bucket", JSON.stringify([]))
+                if (!localStorage.getItem("basket"))
+                    localStorage.setItem("basket", JSON.stringify([]))
 
 
-                const bucket = JSON.parse(localStorage.getItem("bucket"));
-                bucket.push(object)
-                localStorage.setItem("bucket", JSON.stringify(bucket))
+                const basket = JSON.parse(localStorage.getItem("basket"));
+                basket.push(object)
+                localStorage.setItem("basket", JSON.stringify(basket))
             })
 
             const btnIcon = document.createElement("i")
@@ -202,4 +200,35 @@ const addComponent = (dataComponent, components) => {
 
     button.appendChild(type)
     tabContentComponent.appendChild(button)
+}
+
+const refreshBasket = () => {
+    
+    const basket = document.querySelector("#basket")
+    const basketStorage = JSON.parse(localStorage.getItem("basket"))
+
+    basketStorage.forEach(object => {
+        const basketItem = document.createElement("li")
+        basketItem.classList.add("basket", "dropdown-item")
+        
+        const basketPrice = document.createElement("span")
+        basketPrice.classList.add("basket__price")
+        basketPrice.innerHTML = `${object.price}€`
+
+        const basketType = document.createElement("span")
+        basketType.classList.add("basket__type")
+        basketType.innerHTML = `${object.type}`
+
+        const basketReset = document.createElement("button")
+        basketReset.classList.add("btn")
+        basketReset.innerHTML = "x"
+
+        basketItem.appendChild(basketType)
+        basketItem.appendChild(basketPrice)
+        basketItem.appendChild(basketReset)
+        basket.appendChild(basketItem)
+        
+        
+    })
+
 }
