@@ -1,4 +1,4 @@
-const openTab = (evt, tabName) => {
+function openTab (evt, tabName) {
   // Declare all variables
   let i, tabcontent, tablinks;
 
