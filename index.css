@@ -206,28 +206,6 @@ h3 {
   }
 }
 
-/* Fußleiste */
-/*
-footer {
-  margin-top: auto;
-  background-color: #e4e4e4;
-  text-align: center;
-}
-
-.footertext{
-  padding: 1rem
-}
-
-.footerlink {
-  color: black;
-  text-decoration: none;
-}
-
-.footerlinks:hover,
-.footerlink.active {
-  font-weight: bold;
-}*/
-
 
 /* Hompage */
 
@@ -256,6 +234,10 @@ footer {
 .tabcontent {
   display: none;
   padding-bottom: .8rem;
+}
+
+.tabcontent.active {
+  display: block;
 }
 
 .intab-button {

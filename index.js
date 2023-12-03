@@ -1,19 +1,45 @@
-function openTab (evt, tabName) {
-  // Declare all variables
-  let i, tabcontent, tablinks;
+const companyTab = document.querySelector("#tcompany");
+let tmod = document.getElementById("tmodel");
+let tdef = document.getElementById("tdefect");
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+
+const hidecontent = () => {
+  const tabcontent = document.getElementsByClassName("tabcontent");
+  for (tabcontent of tabcontent) {
+    tabcontent.style.display = "none"
+  }
 }
- // Get all elements with class="tablinks" and remove the class "active"
- tablinks = document.querySelectorAll('.tablinks, .intab-button, .dropdown-item');
- for (i = 0; i < tablinks.length; i++) {
-   tablinks[i].className = tablinks[i].className.replace(" active", "");
- } 
 
- // Show the current tab, and add an "active" class to the button that opened the tab
- document.getElementById(tabName).style.display = "block";
- evt.currentTarget.className += " active";
+const openTab = (tab) => {
+   
+   const tabID = tab.id
+   const tabContent = document.querySelectorAll(`.tabcontent[attr-tab="${tabID}"]`)[0]
+   const tabContents = document.querySelectorAll(".tabcontent")
+
+   tabContents.forEach((tabContent) => {
+     tabContent.classList.remove("active")
+   })
+
+   tabContent.classList.add("active")
+   
+   const tabLinks = document.querySelectorAll(".tablinks")
+  
+   tabLinks.forEach((tabLink) => {
+    tabLink.classList.remove("active")
+  })
+   tab.classList.add("active")
+}
+
+const fetchCompany = () => {
+  fetch("https://iu-backend.onrender.com/manufacturer/", {
+    method: "GET",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => {
+    return response.json()
+  }).then((json) => {
+    console.log(json)
+  })
 }
