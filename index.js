@@ -87,7 +87,7 @@ const addDevice = (dataDevice) => {
     button.classList.add("intab-button", "btn")
 
     button.addEventListener("click", () => {
-        //fetchDevices(dataDevice.slug)
+        fetchComponents(dataDevice.manufacturer, dataDevice.slug)
         openTab("components")
     })
 
@@ -100,7 +100,7 @@ const addDevice = (dataDevice) => {
 }
 
 const fetchComponents = (manufacturer, device) => {
-    fetch(`https://iu-backend.onrender.com/manufacturer/apple/devices/iphone-15/components`, {
+    fetch(`https://iu-backend.onrender.com/manufacturer/${manufacturer}/devices/${device}/components`, {
         method: "GET",
         headers: {
             'Accept': 'application/json',
@@ -112,12 +112,12 @@ const fetchComponents = (manufacturer, device) => {
         const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]')  
         tabContentComponent.innerHTML = ""
         json.response.forEach(component => {
-            addComponent(component)
+            addComponent(component, json.response)
         })
     })
 }
 
-const addComponent = (dataComponent) => {
+const addComponent = (dataComponent, components) => {
 
     const tabContentComponent = document.querySelector('.tabcontent[attr-tab="components"]')  
 
@@ -125,13 +125,13 @@ const addComponent = (dataComponent) => {
     button.classList.add("intab-button", "btn")
 
     button.addEventListener("click", () => {
-        openTab("components")
+        //TODO: load component with prices
+
     })
 
-    const name = document.createElement("span")
-    name.innerText = dataComponent.name
+    const type = document.createElement("span")
+    type.innerText = dataComponent.type
 
-    button.appendChild(name)
-
+    button.appendChild(type)
     tabContentComponent.appendChild(button)
 }
