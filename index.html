@@ -48,125 +48,25 @@
     <section class="section-b">
             <div class="container-sm text-start">
                 <div class="tab">
-                    <button class="tablinks active" id="company" onclick='openTab("manufacturers")'>Hersteller</button>
-                    <button class="tablinks" id="model" onclick='openTab("devices")'>Modell</button>
-                    <button class="tablinks" id="defect" onclick='openTab("components")'>Defekte Komponente</button>
+                    <button class="tablinks active" id="manufacturers" onclick='openTab("manufacturers")'>Hersteller</button>
+                    <button class="tablinks" id="devices" onclick='openTab("devices")'>Modell</button>
+                    <button class="tablinks" id="components" onclick='openTab("components")'>Defekte Komponente</button>
                 </div>
         
                 <!-- Tab content -->
                 <div class="tabcontent active" attr-tab="manufacturers"></div>
         
-                <div class="tabcontent" attr-tab="devices">
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone SE
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">iPhone SE 2016 (1.Generation)</a></li>
-                        <li><a class="dropdown-item">iPhone SE 2020 (2.Generation)</a></li>
-                        <li><a class="dropdown-item">iPhone SE 2022 (3.Generation)</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 15
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">15</a></li>
-                        <li><a class="dropdown-item">15 Plus</a></li>
-                        <li><a class="dropdown-item">15 Pro</a></li>
-                        <li><a class="dropdown-item">15 Pro Max</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 14
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">14</a></li>
-                        <li><a class="dropdown-item">14 Plus</a></li>
-                        <li><a class="dropdown-item">14 Pro</a></li>
-                        <li><a class="dropdown-item">14 Pro Max</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 13
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">13 mini</a></li>
-                        <li><a class="dropdown-item">13</a></li>
-                        <li><a class="dropdown-item">13 Pro</a></li>
-                        <li><a class="dropdown-item">13 Pro Max</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 12
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">12 mini</a></li>
-                        <li><a class="dropdown-item">12</a></li>
-                        <li><a class="dropdown-item">12 Pro</a></li>
-                        <li><a class="dropdown-item">12 Pro Max</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 11
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">11</a></li>
-                        <li><a class="dropdown-item">11 Pro</a></li>
-                        <li><a class="dropdown-item">11 Pro Max</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone X
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">X</a></li>
-                        <li><a class="dropdown-item">XR</a></li>
-                        <li><a class="dropdown-item">XS</a></li>
-                        <li><a class="dropdown-item">XS Max</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 8
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">8</a></li>
-                        <li><a class="dropdown-item">8 Plus</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 7
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">7</a></li>
-                        <li><a class="dropdown-item">7 Plus</a></li>
-                    </ul>
-        
-                    <button type="button" class="btn intab-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        iPhone 6
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">6</a></li>
-                        <li><a class="dropdown-item">6 Plus</a></li>
-                        <li><a class="dropdown-item">6s</a></li>
-                        <li><a class="dropdown-item">6s Plus</a></li>
-                    </ul>
-                </div>
+                <div class="tabcontent" attr-tab="devices"></div>
 
-        
-                <div class="tabcontent" attr-tab="components">
-                    <button class="btn intab-button">Display</button>
-                    <button class="btn intab-button">Akku</button>
-                    <button class="btn intab-button">Kameraglas</button>
-                    <button class="btn intab-button">Gehäuse</button>
-                </div>
+                <div class="tabcontent" attr-tab="components"></div>
             </div>
             <br>
             <div class="container-sm text-start padding"> <!--Eine Art Progress bar, mit der man seine Auswahl und den entsprechenden Preis sehen kann-->
                 <div class="row">
-                    <div class="col progres" id="progress-company"></div>
-                    <div class="col progres" id="progress-model"></div>
-                    <div class="col progres" id="progress-defect"></div>
-                    <div class="col progres" id="progress-price"></div>
+                    <div class="col progres"></div>
+                    <div class="col progres"></div>
+                    <div class="col progres"></div>
+                    <div class="col progres"></div>
                 </div>
             </div>    
     </section>
