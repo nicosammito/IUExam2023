@@ -191,6 +191,20 @@ h3 {
   }
 }
 
+.container-sm-ip {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .container-sm-ip {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 /* Fußleiste */
 footer {
