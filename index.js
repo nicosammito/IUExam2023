@@ -170,7 +170,15 @@ const addComponent = (dataComponent, components) => {
 
             const button = document.createElement("button")
             button.classList.add("component__action")
-            button.addEventListener("click", () => {
+            button.addEventListener("click", (event) => {
+
+                event.target.innerHTML = "hinzugefügt"
+                event.target.innerText = ""
+                event.target.innerHTML = "hinzugefügt"
+                event.target.innerText = ""
+                event.target.innerHTML = "hinzugefügt"
+                event.target.classList.add("component__action--disabled")
+
                 const object = {
                     price: component.price,
                     description: component.description,
@@ -205,11 +213,39 @@ const addComponent = (dataComponent, components) => {
 const refreshBasket = () => {
     
     const basket = document.querySelector("#basket")
+    basket.innerHTML = ""
     const basketStorage = JSON.parse(localStorage.getItem("basket"))
 
-    basketStorage.forEach(object => {
+    if (basketStorage.length <= 0) {
         const basketItem = document.createElement("li")
         basketItem.classList.add("basket", "dropdown-item")
+
+        const basketType = document.createElement("span")
+        basketType.classList.add("basket__type")
+        basketType.innerHTML = `It's empty here`
+
+        basketItem.appendChild(basketType)
+        basket.appendChild(basketItem)
+
+
+        const link = document.createElement("a")
+        link.href = "https://paypal.de"
+
+        const basketPay = document.createElement("button")
+        basketPay.classList.add("basket__button")
+        basketPay.innerHTML = "Bezahlen"
+
+        link.appendChild(basketPay)
+        basket.appendChild(link)
+
+        return
+    }
+
+    basketStorage.forEach((object, index) => {
+        const basketItem = document.createElement("li")
+        basketItem.classList.add("basket", "dropdown-item")
+
+        const wrapper = document.createElement("div")
         
         const basketPrice = document.createElement("span")
         basketPrice.classList.add("basket__price")
@@ -222,13 +258,28 @@ const refreshBasket = () => {
         const basketReset = document.createElement("button")
         basketReset.classList.add("btn")
         basketReset.innerHTML = "x"
+        basketReset.addEventListener("click", () => {
+            basketStorage.splice(index, 1);
+            localStorage.setItem("basket", JSON.stringify(basketStorage))
+            refreshBasket()
+        })
+
+        wrapper.appendChild(basketPrice)
+        wrapper.appendChild(basketReset)
 
         basketItem.appendChild(basketType)
-        basketItem.appendChild(basketPrice)
-        basketItem.appendChild(basketReset)
+        basketItem.appendChild(wrapper)
         basket.appendChild(basketItem)
-        
-        
     })
+
+    const link = document.createElement("a")
+    link.href = "https://paypal.de"
+
+    const basketPay = document.createElement("button")
+    basketPay.classList.add("basket__button")
+    basketPay.innerHTML = "Bezahlen"
+
+    link.appendChild(basketPay)
+    basket.appendChild(link)
 
 }
