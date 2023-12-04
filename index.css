@@ -94,6 +94,11 @@ h3 {
 /* Navigationsleiste */
 
 /* Menü */
+
+/* nav {
+    position: sticky;
+} */
+
 .dropdown-menu {
     background: rgba(255, 255, 255, .5);
     backdrop-filter: blur(.5rem);
@@ -348,14 +353,14 @@ h3 {
 .card-img-top {
     margin: 0 auto;
     margin-top: 1.25rem;
-    border: 3px solid green;
+    border: 3px solid pink;
 }
 
 /* Profile pictures */
 .container-sm-au img {
-    clip-path: circle(50%);
-    width: 6.25rem;
-    height: 6.25rem;
+    clip-path: circle(45%);
+    width: 8rem;
+    height: 8rem;
     object-fit: cover;
 }
 
