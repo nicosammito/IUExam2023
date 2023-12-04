@@ -222,7 +222,7 @@ const refreshBasket = () => {
 
         const basketType = document.createElement("span")
         basketType.classList.add("basket__type")
-        basketType.innerHTML = `It's empty here`
+        basketType.innerHTML = `Der Warenkorb ist leer.`
 
         basketItem.appendChild(basketType)
         basket.appendChild(basketItem)
