@@ -4,49 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <title>Impressum</title>
-    <script src="js/index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/index.css" />
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 </head>
 
 <body>
-    <nav class="navbar navbar-controller">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <div class="logo">R.</div>
+
+<nav class="navbar navbar-controller">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <div class="logo">R.</div>
+        </a>
+        <ul class="navbar nav">
+            <li class="nav-item">
+                <div class="btn-group dropstart">
+                    <button type="button" class="btn btn-transparent" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-list"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html"><i class="ti ti-home-2"></i> Home</a></li>
+                        <li><a class="dropdown-item" href="about.html"><i class="ti ti-info-circle"></i>Über Uns</a>
+                        </li>
+                        <li><a class="dropdown-item" href="contact.html"><i class="ti ti-address-book"></i>Kontakt</a>
+                        </li>
+                        <li><a class="dropdown-item active" href="imprint.html"><i class="ti ti-section-sign"></i>Impressum</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section-a">
+    <div class="container">
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+            <h2 class="text-start">Impressum</h2>
+            <p class="text-start">Dein Handy Repair Shop</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-b">
+    <div class="container-sm-ip">
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>Anschrift</h3>
+                Hildebrandtsraße 24c, 40215 Düsseldorf<br><br>
+            </div>
+            <div class="col">
+                <h3>Geschäftsführung</h3>
+                Lars van Gansewinkel<br>
+                Noah Rudnik<br>
+                Jule Sluiters<br>
+                Nico Sammito<br><br>
+            </div>
+            <div class="col">
+                <h3>Telefon</h3>
+                0172 6622 444<br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
             </a>
-            <ul class="navbar nav">
-                <li class="nav-item">
-                    <div class="btn-group dropstart">
-                        <button type="button" class="btn btn-transparent" data-bs-toggle="dropdown">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-list"
-                                viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html"><i class="ti ti-home-2"></i> Home</a></li>
-                            <li><a class="dropdown-item" href="about.html"><i class="ti ti-info-circle"></i>Über Uns</a>
-                            </li>
-                            <li><a class="dropdown-item" href="contact.html"><i
-                                        class="ti ti-address-book"></i>Kontakt</a></li>
-                            <li><a class="dropdown-item active" href="imprint.html"><i
-                                        class="ti ti-section-sign"></i>Impressum</a></li>
-                        </ul>
-                    </div>
+            <p class="text-body-secondary">Dein Handy Repair Shop © 2023</p>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+
+        <div class="col mb-3">
+            <h5>Links</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">Über Uns</a>
+                </li>
+                <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-body-secondary">Kontakt</a>
+                </li>
+                <li class="nav-item mb-2"><a href="imprint.html" class="nav-link p-0 text-body-secondary">Impressum</a>
                 </li>
             </ul>
         </div>
-    </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        <div class="col mb-3">
+            <h5>Legal</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="imprint.html" class="nav-link p-0 text-body-secondary">Impressum</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>Zahlungs- & Versandoptionen</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="https://www.paypal.com/de/home/" class="nav-link p-0 text-body-secondary">PayPal</a></li>
+                <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">FrohsinnVersand</a>
+                </li>
+                <li class="nav-item mb-2"><a href="/"
+                        class="nav-link p-0 text-body-secondary">HeiterPaket Kurier</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <!--von nico damit JS funktioniert. ich glaube, das muss immer ganz unten sein-->
-</body>
 
+</body>
 </html>
